@@ -1,5 +1,5 @@
 import React from "react";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Messages.scss";
 
 export interface IMessage {
@@ -36,23 +36,23 @@ export const MessagePage: React.FC = () => {
     let { id } = useParams();
 
     const getMessages = () => {
-      return messages.map((msg, id) => {
-          return (
-            <div
-              key={id}
-              className={`message-bubble-container ${
-                msg.receiver ? "from" : "to"
-              }`}
-            >
-              <div
-                className={`message-bubble ${
-                  msg.receiver ? "from" : "to"
-                }`}
-              >
-                {msg.text}
-              </div>
-            </div>
-          );
+        return messages.map((msg, id) => {
+            return (
+                <div
+                    key={id}
+                    className={`message-bubble-container ${
+                        msg.receiver ? "from" : "to"
+                    }`}
+                >
+                    <div
+                        className={`message-bubble ${
+                            msg.receiver ? "from" : "to"
+                        }`}
+                    >
+                        {msg.text}
+                    </div>
+                </div>
+            );
         });
     };
 

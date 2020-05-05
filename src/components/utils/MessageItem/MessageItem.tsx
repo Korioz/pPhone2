@@ -37,18 +37,24 @@ const Message: React.FC<IMessage> = (props: IMessage) => {
                             props.edit ? "edit" : ""
                         }`}
                     ></div>
-                ) : false}
+                ) : (
+                    false
+                )}
             </div>
 
             <div className="item-mail">
                 <div className="item-mail-top">
                     {props.title ? (
                         <span id="mail-sender">{props.title}</span>
-                    ) : false}
+                    ) : (
+                        false
+                    )}
                     <div className="item-mail-top-right">
                         {props.date ? (
                             <span id="mail-date">{props.date}</span>
-                        ) : false}
+                        ) : (
+                            false
+                        )}
                         <ReactSVG
                             beforeInjection={svg => {
                                 svg.setAttribute("width", "8px");
