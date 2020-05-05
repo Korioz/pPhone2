@@ -1,5 +1,5 @@
 $btn-background: #e5e5e5;
-$green:#63c366;
+$green: #63c366;
 $red: #eb4e3d;
 $white-hover: #999999;
 
@@ -44,7 +44,7 @@ $white-hover: #999999;
         justify-content: space-between;
         display: flex;
     }
-    
+
     .btn-container {
         height: 80px;
         width: 80px;
@@ -53,84 +53,84 @@ $white-hover: #999999;
         display: flex;
         flex-direction: column;
     }
-    
+
     .circle-btn {
         height: 30px;
         width: 30px;
         padding: 10px;
-        background-color: rgba($btn-background,.15);
+        background-color: rgba($btn-background, 0.15);
         border-radius: 50%;
         fill: white;
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         &.active {
             fill: black;
             background-color: white;
         }
     }
-    
+
     #answer-btn {
         background-color: $green;
         &:hover {
             background-color: darken($green, 20%);
         }
     }
-    
+
     #reject-btn {
         background-color: $red;
         &:hover {
             background-color: darken($red, 20%);
         }
     }
-    
+
     #call-icon {
         width: 22px;
         margin-top: 3.75px;
     }
-    
+
     #reject-icon {
         width: 22px;
         margin-bottom: 4px;
     }
-    
+
     #mute-icon {
         width: 20px;
         margin: 2px 5px 0 5px;
     }
-    
+
     #keypad-icon {
         width: 24px;
         margin-top: 4px;
     }
-    
+
     #speaker-icon {
         width: 30px;
         margin-top: 4px;
     }
-    
+
     #plus-icon {
         width: 16px;
         margin-top: 4px;
     }
-    
+
     #facetime-icon {
         width: 20px;
         margin-top: 4px;
     }
-    
+
     #contact-icon {
         width: 26px;
         margin-top: 4px;
     }
-    
+
     .btn-row {
         display: flex;
         justify-content: space-around;
         margin: 5px 0;
     }
-    
+
     .answer-icon {
         width: 16px;
         height: 16px;

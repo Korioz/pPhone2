@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React from "react";
 
-import './Camera.scss'
+import "./Camera.scss";
 import { withRouter } from "react-router-dom";
 import AppContainer from "../../utils/AppContainer";
 
-const Camera: React.FC = (props: any) => {
+const Camera: React.FC = () => {
     return (
         <AppContainer>
-            <object type="application/x-cfx-game-view" className="gameview-container" />
+            <object
+                type="application/x-cfx-game-view"
+                className="gameview-container"
+            />
             <div className="camera-bottom-nav">
                 <div className="camera-nav-buttons">
                     <div className="camera-button-galery" />
@@ -16,7 +19,7 @@ const Camera: React.FC = (props: any) => {
                 </div>
             </div>
         </AppContainer>
-    )
+    );
 };
 
 export default withRouter(Camera);

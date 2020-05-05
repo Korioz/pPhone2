@@ -9,10 +9,13 @@ const Call: React.FC = (props: any) => {
         <div className="blur-background">
             <Switch>
                 <Route path={props.match.path} exact component={InCallPage} />
-                <Route path={`${props.match.path}/answer`} component={AnswerPage} />
+                <Route
+                    path={`${props.match.path}/answer`}
+                    component={AnswerPage}
+                />
             </Switch>
         </div>
     );
-}
+};
 
 export default Call;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import './Contacts.scss';
-import BackIcon from '../../../assets/icons/back.svg';
+import "./Contacts.scss";
+import BackIcon from "../../../assets/icons/back.svg";
 import PhoneIcon from "../../../assets/icons/phone-fill.svg";
 import MessageIcon from "../../../assets/icons/message.svg";
 import FacetimeIcon from "../../../assets/icons/facetime.svg";
@@ -10,7 +10,6 @@ import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 
 const ContactDetailsPage: React.FC = (props: any) => {
-
     const id = props.match.params.id;
 
     let [edit, setEdit] = useState(false);
@@ -37,10 +36,12 @@ const ContactDetailsPage: React.FC = (props: any) => {
                 </div>
             </div>
             <div className="photo-container">
-                <div id="contact-photo" className={edit ? "photo-lg" : ""}>JD</div>
+                <div id="contact-photo" className={edit ? "photo-lg" : ""}>
+                    JD
+                </div>
             </div>
             {edit ? <EditContactDetails /> : <ContactDetails />}
-        </div >
+        </div>
     );
 };
 
@@ -69,7 +70,11 @@ const ContactDetails: React.FC = () => {
                 </div>
                 <div className="btn-container">
                     <div className="circle-btn">
-                        <ReactSVG id="mail-icon" className="icon" src={MailIcon} />
+                        <ReactSVG
+                            id="mail-icon"
+                            className="icon"
+                            src={MailIcon}
+                        />
                     </div>
                     <h4>mail</h4>
                 </div>
@@ -109,7 +114,7 @@ const ContactDetails: React.FC = () => {
             </ul>
         </React.Fragment>
     );
-}
+};
 
 const EditContactDetails: React.FC = () => {
     return (
@@ -117,17 +122,37 @@ const EditContactDetails: React.FC = () => {
             <h3>Add photo</h3>
             <ul id="contact-details-list">
                 <li>
-                    <input type="text" name="firstname" id="firstname" placeholder="First name" />
+                    <input
+                        type="text"
+                        name="firstname"
+                        id="firstname"
+                        placeholder="First name"
+                    />
                 </li>
                 <li>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last name" />
+                    <input
+                        type="text"
+                        name="lastname"
+                        id="lastname"
+                        placeholder="Last name"
+                    />
                 </li>
                 <li>
-                    <input type="number" name="phone" id="phone" placeholder="Phone" />
+                    <input
+                        type="number"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone"
+                    />
                 </li>
                 <li className="separator" />
                 <li>
-                    <input type="text" name="firstname" id="firstname" placeholder="Email" />
+                    <input
+                        type="text"
+                        name="firstname"
+                        id="firstname"
+                        placeholder="Email"
+                    />
                 </li>
                 <li className="separator" />
                 <li>
@@ -142,6 +167,6 @@ const EditContactDetails: React.FC = () => {
             </ul>
         </React.Fragment>
     );
-}
+};
 
 export default ContactDetailsPage;

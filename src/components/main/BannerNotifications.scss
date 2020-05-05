@@ -1,4 +1,3 @@
-
 .banner-notification-container {
     position: absolute;
     left: 0;
@@ -22,7 +21,7 @@
 
         &.notification-leave-active {
             opacity: 0.01;
-            transition: opacity .4s ease-in;
+            transition: opacity 0.4s ease-in;
         }
     }
 }
@@ -59,7 +58,7 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         h2 {
             margin: 0;
             margin-left: 5px;
@@ -67,7 +66,7 @@
             line-height: 15px;
             flex: 1;
         }
-    
+
         h3 {
             margin: 0;
             line-height: 15px;

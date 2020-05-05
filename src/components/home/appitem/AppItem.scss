@@ -1,10 +1,9 @@
-
 .app-icon {
     display: block;
     position: relative;
     // background-color: red;
     width: 48px;
-    
+
     margin-right: 12px;
     margin-bottom: 8px;
 
@@ -22,14 +21,14 @@
     width: 42px;
     height: 42px;
 
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 
     background-size: contain;
     background-repeat: no-repeat;
- }
+}
 
- .app-text {
+.app-text {
     font-size: 9px;
     color: rgba(240, 240, 240, 0.8);
     padding-bottom: 6px;
@@ -44,5 +43,4 @@
     background: red;
     color: white;
     font-size: 9px;
-  }
-  
+}

@@ -4,15 +4,10 @@ import { TypedUseSelectorHook, useSelector } from "react-redux";
 import { NotifReducer } from "../reducer/NotifReducer";
 
 const reducers = combineReducers({
-  notif: NotifReducer
+    notif: NotifReducer,
 });
 
-const store = createStore(
-  reducers,
-  compose(
-    applyMiddleware(thunk),
-  )
-);
+const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 export default store;
 

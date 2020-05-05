@@ -1,62 +1,66 @@
 * {
-  user-select: none;
-  text-decoration: 'none';
-
-  &:focus, &:hover, &:visited, &:link, &:active {
+    user-select: none;
     text-decoration: none;
-  }
+
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+        text-decoration: none;
+    }
 }
 
 .phone-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 
-  width: 300px;
-  height: 600px;
+    width: 300px;
+    height: 600px;
 
-  margin-bottom: 10px;
-  margin-right: 8px;
+    margin-bottom: 10px;
+    margin-right: 8px;
 
-  font-family: "SFProTextRegular";
+    font-family: "SFProTextRegular";
 }
 
 .phone-content {
-  width: 260px;
-  height: 547px;
+    width: 260px;
+    height: 547px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  margin-left: 20px;
-  margin-top: 15px;
-  background-size: cover;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-size: cover;
 }
 
 .test-bg {
-  background-image: url("https://i.imgur.com/aI8fEEZ.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url("https://i.imgur.com/aI8fEEZ.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 
-  display: none;
+    display: none;
 
-  width: 275px;
-  height: 600px;
-  position: absolute;
+    width: 275px;
+    height: 600px;
+    position: absolute;
 
-  right: -3px;
-  left: 2px;
+    right: -3px;
+    left: 2px;
 }
 
 textarea {
-  border: none;
-  overflow: auto;
-  outline: none;
+    border: none;
+    overflow: auto;
+    outline: none;
 
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 
-  resize: none; /*remove the resize handle on the bottom right*/
+    resize: none; /*remove the resize handle on the bottom right*/
 }
 
 /**
@@ -65,61 +69,61 @@ textarea {
  * ----------------------------------------
  */
 @-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 @keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes scale-out-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
 }
 @keyframes scale-out-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
 }
 
 /* Hide scrolls */
 ::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+    background: #ff0000;
 }

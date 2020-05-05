@@ -1,5 +1,5 @@
 $btn-background: #e5e5e5;
-$btn-call-background:#63c366;
+$btn-call-background: #63c366;
 $red: #eb4e3d;
 $blue: #327bf6;
 
@@ -7,7 +7,6 @@ $blue: #327bf6;
     display: flex;
     justify-content: center;
 }
-
 
 .keypad-header {
     height: 120px;
@@ -69,7 +68,6 @@ $blue: #327bf6;
     line-height: 44px;
 }
 
-
 #sharp-icon {
     width: 16px;
     height: 16px;
@@ -93,7 +91,6 @@ $blue: #327bf6;
     width: 20px;
 }
 
-
 ul.list-view {
     list-style-type: none;
     padding: 0;
@@ -104,10 +101,11 @@ ul.list-view {
         align-items: center;
         font-size: 10px;
         height: 45px;
-        border-bottom: .5px solid #dddddd;
+        border-bottom: 0.5px solid #dddddd;
         transition: margin-left 0.5s;
 
-        h3, h4 {
+        h3,
+        h4 {
             margin: 0;
         }
 
@@ -128,9 +126,9 @@ ul.list-view {
             background-color: #f2f2f6;
         }
     }
-    
+
     li:first-child {
-        border-top: .5px solid #dddddd;
+        border-top: 0.5px solid #dddddd;
     }
 }
 
@@ -188,13 +186,13 @@ ul.list-view {
         text-align: right;
         color: $blue;
     }
-    
+
     .header-left {
         flex: 1;
         text-align: left;
         color: $blue;
     }
-    
+
     .header-middle {
         width: 100px;
         text-align: center;
@@ -202,7 +200,7 @@ ul.list-view {
 }
 
 .border-bottom {
-    border-bottom: .5px solid #f5f5f5;
+    border-bottom: 0.5px solid #f5f5f5;
 }
 
 .call-filter {
@@ -284,13 +282,13 @@ h1.page-title {
     left: 0;
     right: 0;
     height: 18px;
-    z-index:99;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     font-size: 12px;
     align-items: center;
     padding: 10px;
-    border-top: .5px solid #dddddd;
+    border-top: 0.5px solid #dddddd;
     color: #cacaca;
 
     .enable {

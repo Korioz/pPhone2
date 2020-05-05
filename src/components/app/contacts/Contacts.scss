@@ -15,14 +15,14 @@ $red: #eb4e3d;
         text-align: right;
         color: $blue;
     }
-    
+
     .header-left {
         flex: 1;
         display: flex;
         color: $blue;
         align-items: center;
     }
-    
+
     .header-middle {
         width: 100px;
         text-align: center;
@@ -48,7 +48,6 @@ ul#contact-list {
     margin: 0;
 
     li {
-        
         h2 {
             margin: 0;
             font-size: 12px;
@@ -65,12 +64,12 @@ ul#contact-list {
         }
 
         &:not(.separator) {
-            border-top: .5px solid #dddddd;
+            border-top: 0.5px solid #dddddd;
             margin-left: 10px;
         }
 
         &.separator {
-            background-color:#e5e5e5;
+            background-color: #e5e5e5;
             padding: 2.5px 10px;
         }
     }
@@ -181,7 +180,7 @@ ul#contact-list {
         > h4 {
             color: #dcdcdd;
         }
-        
+
         > .circle-btn {
             background-color: transparent;
             border-color: #dcdcdd;
@@ -207,7 +206,7 @@ ul#contact-details-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border-top: .5px solid #dddddd;
+    border-top: 0.5px solid #dddddd;
 
     .separator + li {
         margin: 0;
@@ -219,9 +218,9 @@ ul#contact-details-list {
         padding: 8px 10px 8px 0;
 
         &:not(:first-child) {
-            border-top: .5px solid #dddddd;
+            border-top: 0.5px solid #dddddd;
         }
-        
+
         h2 {
             margin: 0;
             font-size: 11px;

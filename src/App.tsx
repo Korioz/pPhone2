@@ -1,11 +1,10 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-// import bg from "./assets/bg.jpg";
-import { Phone } from './components/main/Phone'
+import { Phone } from "./components/main/Phone";
 
-import SFProTextRegular from './assets/fonts/SF-Pro-Text-Regular.otf'
-import SFProTextSemibold from './assets/fonts/SF-Pro-Text-Semibold.otf'
-import SFProTextLight from './assets/fonts/SF-Pro-Text-Light.ttf'
+import SFProTextRegular from "./assets/fonts/SF-Pro-Text-Regular.otf";
+import SFProTextSemibold from "./assets/fonts/SF-Pro-Text-Semibold.otf";
+import SFProTextLight from "./assets/fonts/SF-Pro-Text-Light.ttf";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,17 +30,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 `;
 
-export const App: React.FC = (props: any) => {
-  return (
-    <Container>
-      <GlobalStyle />
+export const App: React.FC = () => {
+    return (
+        <Container>
+            <GlobalStyle />
 
-      <Phone />
-    </Container>
-  );
+            <Phone />
+        </Container>
+    );
 };

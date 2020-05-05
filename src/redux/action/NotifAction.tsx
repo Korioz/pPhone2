@@ -9,45 +9,53 @@ export const REMOVE_NOTIF = "REMOVE_NOTIF";
 
 // action interfaces
 export interface IAddNotif {
-  type: typeof ADD_NOTIF;
-  payload: {
-    message: string;
-    id: number;
-  };
+    type: typeof ADD_NOTIF;
+    payload: {
+        message: string;
+        id: number;
+    };
 }
 export interface IRemoveNotif {
-  type: typeof REMOVE_NOTIF;
-  payload: { id: number };
+    type: typeof REMOVE_NOTIF;
+    payload: { id: number };
 }
 
 export type INotifActions = IAddNotif | IRemoveNotif;
 
-export const addNotif = (message: string, date: string, appName: string, appIcon: string, link: string, title?: string, timeout?: number): ResultThunk<void> => {
-  return dispatch => {
-    const id = Date.now();
-    dispatch({
-      type: ADD_NOTIF,
-      payload: {
-        message,
-        date,
-        appName,
-        appIcon,
-        link,
-        title,
-        id
-      }
-    });
-    if (timeout) {
-      setTimeout(() => {
-        dispatch(removeNotif(id));
-      }, timeout);
-    }
-  };
+export const addNotif = (
+    message: string,
+    date: string,
+    appName: string,
+    appIcon: string,
+    link: string,
+    title?: string,
+    timeout?: number
+): ResultThunk<void> => {
+    return dispatch => {
+        const id = Date.now();
+        dispatch({
+            type: ADD_NOTIF,
+            payload: {
+                message,
+                date,
+                appName,
+                appIcon,
+                link,
+                title,
+                id,
+            },
+        });
+        if (timeout) {
+            setTimeout(() => {
+                dispatch(removeNotif(id));
+            }, timeout);
+        }
+    };
 };
 
 export const removeNotif = (id: number): IRemoveNotif => ({
-  type: REMOVE_NOTIF,
-  payload: {
-    id
-  }
+    type: REMOVE_NOTIF,
+    payload: {
+        id,
+    },
 });

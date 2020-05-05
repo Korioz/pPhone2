@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import MicIcon from "../../../assets/icons/mic-slash.svg";
-import KeypadIcon from "../../../assets/icons/circle-grid.svg"
-import SpeakerIcon from "../../../assets/icons/speaker.svg"
-import PlusIcon from "../../../assets/icons/plus.svg"
-import FacetimeIcon from "../../../assets/icons/facetime.svg"
-import ContactIcon from "../../../assets/icons/person-2.svg"
+import KeypadIcon from "../../../assets/icons/circle-grid.svg";
+import SpeakerIcon from "../../../assets/icons/speaker.svg";
+import PlusIcon from "../../../assets/icons/plus.svg";
+import FacetimeIcon from "../../../assets/icons/facetime.svg";
+import ContactIcon from "../../../assets/icons/person-2.svg";
 import RejectIcon from "../../../assets/icons/phone-down.svg";
 import { ReactSVG } from "react-svg";
 
 interface CallState {
-    mute: boolean
+    mute: boolean;
 }
 
-const InCallPage: React.FC = prop => {
-
+const InCallPage: React.FC = () => {
     const [state, setState] = useState<CallState>({ mute: false });
 
     const toggleMute = () => setState({ ...state, mute: !state.mute });
@@ -27,20 +26,30 @@ const InCallPage: React.FC = prop => {
             <div>
                 <div className="btn-row">
                     <div className="options-btn" onClick={toggleMute}>
-                        <div className={`circle-btn ${state.mute ? "active" : ""}`}>
+                        <div
+                            className={`circle-btn ${
+                                state.mute ? "active" : ""
+                            }`}
+                        >
                             <ReactSVG id="mute-icon" src={MicIcon}></ReactSVG>
                         </div>
                         <h3>Mute</h3>
                     </div>
                     <div className="options-btn">
                         <div className="circle-btn">
-                            <ReactSVG id="keypad-icon" src={KeypadIcon}></ReactSVG>
+                            <ReactSVG
+                                id="keypad-icon"
+                                src={KeypadIcon}
+                            ></ReactSVG>
                         </div>
                         <h3>Keypad</h3>
                     </div>
                     <div className="options-btn">
                         <div className="circle-btn">
-                            <ReactSVG id="speaker-icon" src={SpeakerIcon}></ReactSVG>
+                            <ReactSVG
+                                id="speaker-icon"
+                                src={SpeakerIcon}
+                            ></ReactSVG>
                         </div>
                         <h3>Speaker</h3>
                     </div>
@@ -54,13 +63,19 @@ const InCallPage: React.FC = prop => {
                     </div>
                     <div className="options-btn">
                         <div className="circle-btn">
-                            <ReactSVG id="facetime-icon" src={FacetimeIcon}></ReactSVG>
+                            <ReactSVG
+                                id="facetime-icon"
+                                src={FacetimeIcon}
+                            ></ReactSVG>
                         </div>
                         <h3>Facetime</h3>
                     </div>
                     <div className="options-btn">
                         <div className="circle-btn">
-                            <ReactSVG id="contact-icon" src={ContactIcon}></ReactSVG>
+                            <ReactSVG
+                                id="contact-icon"
+                                src={ContactIcon}
+                            ></ReactSVG>
                         </div>
                         <h3>Contacts</h3>
                     </div>

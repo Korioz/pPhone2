@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
 
-import './Phone.scss';
-import phoneCase from '../../assets/cases/black.png';
+import "./Phone.scss";
+import phoneCase from "../../assets/cases/black.png";
 import styled from "styled-components";
 
 import { HeaderBar } from "./HeaderBar";
 
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import routes from "../../routes";
 import { BottomPhoneNavigator } from "./BottomPhoneNavigator";
 
@@ -16,7 +16,7 @@ const PhoneCase = styled.div`
     left: 0;
 
     z-index: 99;
-    
+
     width: 100%;
     height: 100%;
 
@@ -24,13 +24,15 @@ const PhoneCase = styled.div`
     background-image: url(${phoneCase});
 
     pointer-events: none;
-`
+`;
 
-import background from '../../assets/backgrounds/001.png'
+import background from "../../assets/backgrounds/001.png";
 import BannerNotifications from "./BannerNotifications";
 
-export const Phone: React.FC = (props: any) => {
-    const loading = () => <div className="animated fadeIn pt-1 text-center">Chargement...</div>
+export const Phone: React.FC = () => {
+    const loading = () => (
+        <div className="animated fadeIn pt-1 text-center">Chargement...</div>
+    );
 
     return (
         <div className="phone-container">
@@ -38,8 +40,11 @@ export const Phone: React.FC = (props: any) => {
             <div className="test-bg" />
 
             <Suspense fallback={loading()}>
-                <HashRouter basename='/phone'>
-                    <div className="phone-content" style={{ backgroundImage: `url(${background})` }}>
+                <HashRouter basename="/phone">
+                    <div
+                        className="phone-content"
+                        style={{ backgroundImage: `url(${background})` }}
+                    >
                         <HeaderBar />
                         <BannerNotifications />
                         <Switch>
@@ -51,8 +56,9 @@ export const Phone: React.FC = (props: any) => {
                                         exact={route.exact}
                                         render={(props: any) => (
                                             <route.component {...props} />
-                                        )} />
-                                ) : (null);
+                                        )}
+                                    />
+                                ) : null;
                             })}
                         </Switch>
                     </div>
@@ -60,6 +66,5 @@ export const Phone: React.FC = (props: any) => {
                 </HashRouter>
             </Suspense>
         </div>
-    )
+    );
 };
-
