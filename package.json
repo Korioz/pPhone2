@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "lint": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "prettier --write \"src/**/*.{ts,tsx,scss}\"",
     "dev": "webpack-dev-server --mode development"
   },
   "eslintConfig": {
