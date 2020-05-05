@@ -39,16 +39,16 @@ export const applicationList: IAppItemProps[] = [
     //{ name: 'Home', icon: 'home' },
     //{ name: 'Notes', icon: 'notes' },
     //{ name: 'Stocks', icon: 'stocks' },
-    { name: "Banque", icon: "wallet", path: "bank" },
+    { name: 'Réglages', icon: 'settings', path: 'Settings' },
+    { name: 'Banque', icon: 'wallet', path: 'bank' },
     //{ name: 'Workspace', icon: 'workspace' },
     { name: "App Store", icon: "appstore" },
     //{ name: 'Health', icon: 'health' },
     { name: "Contacts", icon: "contacts", path: "contacts" },
     //{ name: 'WhatsApp', icon: 'whatsapp' },
     //{ name: 'Local', icon: 'local' },
-    { name: "Réglages", icon: "settings", notifications: 1 },
-    { name: "Calculator", icon: "calculator", path: "calculator" },
-];
+    { name: 'Calculator', icon: 'calculator', path: 'calculator' }
+]
 
 export const bottomApplicationList: IAppItemProps[] = [
     { name: "Téléphone", icon: "call", path: "phone" },
