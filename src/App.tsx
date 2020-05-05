@@ -13,6 +13,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-image: url('https://cdn.gamer-network.net/2014/usgamer/GTA-V-PS4-Screenshot-12.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
   @font-face {
     font-family: 'SFProTextRegular';
