@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 
-import './Phone.scss'
-import coque from '../../assets/coque.png'
+import './Phone.scss';
+import phoneCase from '../../assets/cases/black.png';
 import styled from "styled-components";
 
 import { HeaderBar } from "./HeaderBar";
@@ -10,8 +10,7 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import routes from "../../routes";
 import { BottomPhoneNavigator } from "./BottomPhoneNavigator";
 
-
-const PhoneCoque = styled.div`
+const PhoneCase = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +21,7 @@ const PhoneCoque = styled.div`
     height: 100%;
 
     background-size: cover;
-    background-image: url(${coque});
+    background-image: url(${phoneCase});
 
     pointer-events: none;
 `
@@ -35,7 +34,7 @@ export const Phone: React.FC = (props: any) => {
 
     return (
         <div className="phone-container">
-            <PhoneCoque />
+            <PhoneCase />
             <div className="test-bg" />
 
             <Suspense fallback={loading()}>
